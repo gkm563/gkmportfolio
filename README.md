@@ -25,7 +25,8 @@ This project showcases:
 ##  Folder Structure
 
 gkmportfolio/
-│
+
+
 ├── index.html 
 
 ├── resume gkm.pdf 
@@ -33,15 +34,15 @@ gkmportfolio/
 └── 1.jpg 
 
 ---
-![image](https://github.com/user-attachments/assets/75a6bbdb-1e96-4e45-8b3c-709ac535c361)
-![image](https://github.com/user-attachments/assets/37fd2585-7828-4bcb-a48b-aadeed770a68)
-![image](https://github.com/user-attachments/assets/a2cd2cf4-affc-4d84-8b5f-0ee1907e1af7)
-![image](https://github.com/user-attachments/assets/7faa6a85-5ec3-40af-bd0a-889d1cb071d3)
-![image](https://github.com/user-attachments/assets/8d40fe64-92a4-4f93-b2e9-5dddcc4bbe5e)
-![image](https://github.com/user-attachments/assets/e5b0fda2-275b-4115-a841-75e57ee99fe0)
-![image](https://github.com/user-attachments/assets/2a318fda-d1ac-4c3f-847b-6d1047e61e05)
-![image](https://github.com/user-attachments/assets/080e8d72-4340-4650-b1bb-d19242e6fc90)
 ![image](https://github.com/user-attachments/assets/c85179ea-0eeb-45c2-8d9c-4b6614e3c9c4)
+![image](https://github.com/user-attachments/assets/080e8d72-4340-4650-b1bb-d19242e6fc90)
+![image](https://github.com/user-attachments/assets/2a318fda-d1ac-4c3f-847b-6d1047e61e05)
+![image](https://github.com/user-attachments/assets/e5b0fda2-275b-4115-a841-75e57ee99fe0)
+![image](https://github.com/user-attachments/assets/8d40fe64-92a4-4f93-b2e9-5dddcc4bbe5e)
+![image](https://github.com/user-attachments/assets/7faa6a85-5ec3-40af-bd0a-889d1cb071d3)
+![image](https://github.com/user-attachments/assets/a2cd2cf4-affc-4d84-8b5f-0ee1907e1af7)
+![image](https://github.com/user-attachments/assets/37fd2585-7828-4bcb-a48b-aadeed770a68)
+![image](https://github.com/user-attachments/assets/75a6bbdb-1e96-4e45-8b3c-709ac535c361)
 
 ---
 
