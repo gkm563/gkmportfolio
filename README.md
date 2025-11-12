@@ -1,4 +1,4 @@
-# GKM Portfolio - Gautam Kumar Maurya
+# GKM Portfolio - Gautam Kumar Maurya(GKM)
 
 Welcome to my personal portfolio website!  
 I’m **Gautam Kumar Maurya**, a passionate B.Tech student and an aspiring Data Scientist currently learning DSA, Web Development, and Ethical Hacking.
