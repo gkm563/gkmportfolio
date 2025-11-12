@@ -4,13 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gautam Kumar Maurya | Professional Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    
+    <!-- === SEO & METADATA === -->
+    <title>Gautam Kumar Maurya | Full-Stack Developer & Cybersecurity Enthusiast</title>
+    <meta name="author" content="Gautam Kumar Maurya">
+    <meta name="description" content="Portfolio of Gautam Kumar Maurya, a B.Tech CSE student specializing in Full-Stack Development (React, Node, Python) and Cybersecurity (Ethical Hacking, OSINT).">
+    <meta name="keywords" content="Gautam Kumar Maurya, GKM, GKM563, Full-Stack Developer, React Developer, Python Developer, Cybersecurity, Ethical Hacking, OSINT, Portfolio, B.Tech, CSE, UIT Prayagraj">
+
+    <!-- Open Graph (for social sharing - LinkedIn, Facebook) -->
+    <meta property="og:title" content="Gautam Kumar Maurya | Professional Portfolio">
+    <meta property="og:description" content="Exploring Full-Stack Development, AI, and Cybersecurity. Let's connect and build the future.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gkm563.github.io/"> <!-- Replace with your final GitHub Pages URL -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0f172a/0ea5e9?text=Gautam+Kumar+Maurya"> <!-- Recommended: Create and upload a preview image (1200x630px) -->
+
+    <!-- Twitter Card (for sharing on Twitter/X) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gautam Kumar Maurya | Professional Portfolio">
+    <meta name="twitter:description" content="Exploring Full-Stack Development, AI, and Cybersecurity. Let's connect and build the future.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/0f172a/0ea5e9?text=Gautam+Kumar+Maurya"> <!-- Use the same image as og:image -->
+
+    <!-- Favicon (Replace with your own favicon.ico) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- === STYLESHEETS === -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* === ROOT VARIABLES / REFINED COLOR SCHEME === */
         :root {
@@ -146,7 +167,7 @@
         }
 
         .main-nav ul li {
-            margin-left: 2.5rem;
+            margin-left: 2.2rem; /* Adjusted for new item */
         }
 
         .main-nav ul li a {
@@ -156,6 +177,7 @@
             transition: color 0.3s ease;
             position: relative;
             padding-bottom: 5px;
+            font-size: 0.95rem; /* Adjusted for new item */
         }
 
         .main-nav ul li a::after {
@@ -326,6 +348,7 @@
             opacity: 0.7;
             transform: none;
             box-shadow: none;
+            cursor: not-allowed;
         }
 
         .scroll-down {
@@ -452,8 +475,10 @@
         }
 
         /* === SKILLS & PROJECTS CARDS - UPGRADED LOOK === */
+        /* Applied to skill, project, and new service cards */
         .skill-card,
-        .project-card {
+        .project-card,
+        .service-card {
             background: var(--card-color);
             padding: 2rem;
             border-radius: 10px;
@@ -465,7 +490,8 @@
         }
 
         .skill-card::before,
-        .project-card::before {
+        .project-card::before,
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -479,17 +505,20 @@
         }
 
         .skill-card:hover::before,
-        .project-card:hover::before {
+        .project-card:hover::before,
+        .service-card:hover::before {
             opacity: 1;
         }
 
         .skill-card:hover,
-        .project-card:hover {
+        .project-card:hover,
+        .service-card:hover {
             border-color: rgba(14, 165, 233, 0.3);
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
+        /* === NEW SKILLS SECTION STYLING === */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -502,18 +531,58 @@
 
         .skill-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem; /* Increased margin */
             color: var(--primary-color);
         }
 
-        .skill-list li {
-            background: rgba(14, 165, 233, 0.1);
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            font-weight: 500;
+        .skill-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.5rem;
+            justify-items: center;
         }
 
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+        .skill-item i {
+            font-size: 2.5rem; /* Logos */
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            height: 40px; /* Fixed height for alignment */
+            width: 40px; /* Fixed width for alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Specific color overrides for brand logos */
+        .skill-item i.fa-react { color: #61DAFB; }
+        .skill-item i.fa-js { color: #F7DF1E; }
+        .skill-item i.fa-html5 { color: #E34F26; }
+        .skill-item i.fa-css3-alt { color: #1572B6; }
+        .skill-item i.fa-node-js { color: #339933; }
+        .skill-item i.fa-python { color: #3776AB; }
+        .skill-item i.fa-database { color: #4DB33D; } /* For MongoDB */
+        .skill-item i.fa-shield-halved, .skill-item i.fa-user-secret { color: var(--secondary-color); }
+        
+
+        .skill-item span {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .skill-item:hover i {
+            transform: scale(1.1) translateY(-5px);
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+
+        /* === PROJECTS SECTION === */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -586,10 +655,47 @@
             margin-left: 5px;
         }
 
+        /* === NEW SERVICES SECTION === */
+        #services {
+            background-color: var(--card-color); /* Match About section */
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #94a3b8;
+            flex-grow: 1;
+        }
+
         /* === EDUCATION & ACHIEVEMENTS (TIMELINE) === */
         #education,
         #achievements {
             background-color: var(--card-color);
+        }
+        
+        #achievements {
+             background-color: #020617; /* Different background for variety */
         }
 
         .timeline {
@@ -648,6 +754,15 @@
             border-radius: 8px;
             border-left: 4px solid var(--primary-color);
         }
+        
+        #achievements .timeline-content {
+            background: var(--card-color); /* Match section bg */
+        }
+        
+        #achievements .timeline-item::after {
+             border: 4px solid #020617;
+        }
+
 
         .timeline-content h3 {
             font-size: 1.2rem;
@@ -758,6 +873,10 @@
             .container {
                 padding: 0 1rem;
             }
+            
+            .main-nav ul li {
+                margin-left: 0; /* Remove margin for mobile nav */
+            }
 
             .main-nav ul {
                 position: fixed;
@@ -779,6 +898,10 @@
 
             .main-nav ul li {
                 margin: 1.5rem 0;
+            }
+            
+            .main-nav ul li a {
+                font-size: 1.2rem; /* Larger text for mobile menu */
             }
 
             .hamburger {
@@ -854,6 +977,8 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <!-- NEW SECTION LINK -->
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -873,18 +998,20 @@
         <div class="container">
             <div class="hero-content" data-aos="zoom-in">
                 <h1><span>Gautam Kumar Maurya</span></h1>
+                <!-- UPDATED TYPED.JS SUBTITLE -->
                 <p class="subtitle"><span id="typed-subtitle"></span></p>
                 <div class="hero-social-links">
-                    
-                    
-                    
-                <a href="https://www.linkedin.com/in/gkm563/  " target="_blank" aria-label="LinkedIn"><i  class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/gkm563  " target="_blank" aria-label="GitHub"><i   class="fab fa-github"></i></a>
-                <a href="https://x.com/gkm563" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/gkm3563/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/gkm563" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@gkm563" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                     
+                    <a href="https://www.linkedin.com/in/gkm563/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/gkm563" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://x.com/gkm563" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/gkm3563/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/gkm563" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@gkm563" target="_blank" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
                 </div>
                 <div class="hero-buttons">
                     <a href="#contact" class="cta-button">Get In Touch</a>
@@ -902,7 +1029,8 @@
             <h2 class="section-title" data-aos="fade-up">About Me</h2>
             <div class="about-content">
                 <div data-aos="fade-right" data-aos-delay="200">
-                    <img src="1.jpg" alt="Gautam Kumar Maurya" class="about-image">
+                    <img src="https://placehold.co/300x300/0f172a/0ea5e9?text=GKM" alt="Gautam Kumar Maurya" class="about-image">
+                    <!-- TODO: Replace placeholder with your actual image: <img src="1.jpg" ... > -->
                 </div>
                 <div class="about-text" data-aos="fade-left" data-aos-delay="300">
                     <h3>A Passionate Tech Explorer</h3>
@@ -920,35 +1048,100 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- === UPGRADED SKILLS SECTION === -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card" data-aos="fade-right" data-aos-delay="100">
-                    <h3>Languages</h3>
-                    <ul class="skill-list">
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>Python (Basic)</li>
-                    </ul>
+                
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Web Technologies</h3>
-                    <ul class="skill-list">
-                        <li>HTML</li>
-                        <li>Web Design</li>
-                        <li>CSS (Learning)</li>
-                    </ul>
+                    <h3>Backend Development</h3>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                         <div class="skill-item">
+                            <i class="fab fa-python" style="color: #fff;"></i> <!-- Placeholder for Flask/Django -->
+                            <span>Flask/Django</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card" data-aos="fade-left" data-aos-delay="300">
-                    <h3>Interests</h3>
-                    <ul class="skill-list">
-                        <li>Ethical Hacking</li>
-                        <li>Cybersecurity</li>
-                        <li>Artificial Intelligence</li>
-                    </ul>
+                
+                 <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Specializations</h3>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Cybersecurity</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Ethical Hacking</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-magnifying-glass-chart"></i>
+                            <span>OSINT</span>
+                        </div>
+                         <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI / ML</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-c"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-plus"></i> <!-- C++ icon is complex, using this -->
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -958,17 +1151,15 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">My Projects</h2>
             <div class="projects-grid">
+                <!-- Projects 1-9 (No changes, just add AOS delays) -->
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-content">
+                     <div class="project-content">
                         <div class="project-icon"><i class="fas fa-globe"></i></div>
                         <h3>AI-Powered Browser</h3>
-                        <p>A full-fledged browser with AI features, including new tabs, incognito mode, profiles,
-                            settings, and a download manager.</p>
+                        <p>A full-fledged browser with AI features, including new tabs, incognito mode, profiles, settings, and a download manager.</p>
                         <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span
-                                    class="tech-tag">AI</span><span class="tech-tag">GUI</span></div><a
-                                href="https://github.com/gkm563/gkm-browser" class="project-link" target="_blank">View
-                                on GitHub <i class="fab fa-github"></i></a>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">AI</span><span class="tech-tag">GUI</span></div>
+                            <a href="https://github.com/gkm563/gkm-browser" class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -976,13 +1167,10 @@
                     <div class="project-content">
                         <div class="project-icon"><i class="fab fa-linkedin"></i></div>
                         <h3>LinkedIn Post Generator</h3>
-                        <p>A website where users can set basic parameters to generate engaging LinkedIn posts
-                            automatically.</p>
+                        <p>A website where users can set basic parameters to generate engaging LinkedIn posts automatically.</p>
                         <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Web App</span><span
-                                    class="tech-tag">API</span><span class="tech-tag">AI</span></div><a
-                                href="https://github.com/gkm563/linkedin-post-generator" class="project-link"
-                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                            <div class="tech-tags"><span class="tech-tag">Web App</span><span class="tech-tag">API</span><span class="tech-tag">AI</span></div>
+                            <a href="https://github.com/gkm563/linkedin-post-generator" class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -990,13 +1178,10 @@
                     <div class="project-content">
                         <div class="project-icon"><i class="fas fa-house-user"></i></div>
                         <h3>Prayagraj Rooms</h3>
-                        <p>A professional UI website for students in Prayagraj to find rooms and for owners to list
-                            their properties.</p>
+                        <p>A professional UI website for students in Prayagraj to find rooms and for owners to list their properties.</p>
                         <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Web App</span><span
-                                    class="tech-tag">UI/UX</span></div><a
-                                href="https://github.com/gkm563/prayagraj-rooms" class="project-link"
-                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                            <div class="tech-tags"><span class="tech-tag">Web App</span><span class="tech-tag">UI/UX</span></div>
+                            <a href="https://github.com/gkm563/prayagraj-rooms" class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1004,13 +1189,10 @@
                     <div class="project-content">
                         <div class="project-icon"><i class="fas fa-robot"></i></div>
                         <h3>AI Smart Ad Blocker</h3>
-                        <p>An intelligent ad blocker that uses AI to learn and block intrusive ads more effectively than
-                            traditional methods.</p>
+                        <p>An intelligent ad blocker that uses AI to learn and block intrusive ads more effectively than traditional methods.</p>
                         <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">AI/ML</span><span
-                                    class="tech-tag">Python</span></div><a
-                                href="https://github.com/gkm563/adblocker-extension" class="project-link"
-                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                            <div class="tech-tags"><span class="tech-tag">AI/ML</span><span class="tech-tag">Python</span></div>
+                            <a href="https://github.com/gkm563/adblocker-extension" class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1018,13 +1200,10 @@
                     <div class="project-content">
                         <div class="project-icon"><i class="fas fa-key"></i></div>
                         <h3>Keylogger & Screenshot Logger</h3>
-                        <p>A system developed for a hackathon to demonstrate security vulnerabilities, capturing
-                            keystrokes and screenshots.</p>
+                        <p>A system developed for a hackathon to demonstrate security vulnerabilities, capturing keystrokes and screenshots.</p>
                         <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span
-                                    class="tech-tag">Security</span></div><a
-                                href="https://github.com/gkm563/telegram-monitoring-tool" class="project-link"
-                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Security</span></div>
+                            <a href="https://github.com/gkm563/telegram-monitoring-tool" class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1032,57 +1211,41 @@
                     <div class="project-content">
                         <div class="project-icon"><i class="fab fa-telegram-plane"></i></div>
                         <h3>YouTube Downloader Bot</h3>
-                        <p>A Telegram bot built for learning purposes that allows users to download YouTube videos
-                            directly through chat.</p>
+                        <p>A Telegram bot built for learning purposes that allows users to download YouTube videos directly through chat.</p>
                         <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">API</span>
-                            </div><a href="https://github.com/gkm563/youtube-downloader" class="project-link"
-                                target="_blank">View on GitHub <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-content">
-                        <div class="project-icon"><i class="fas fa-microphone-alt"></i></div>
-                        <h3>JARVIS Voice Assistant</h3>
-                        <p>A personal voice assistant inspired by JARVIS, designed to perform tasks based on voice
-                            commands.</p>
-                        <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Speech
-                                    Recognition</span></div><a href="https://github.com/gkm563/jarvis-ai"
-                                class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-content">
-                        <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                        <h3>Classic Snake Game</h3>
-                        <p>A recreation of the classic Snake game, built to practice fundamental programming concepts in
-                            Python.</p>
-                        <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span
-                                    class="tech-tag">Pygame</span></div><a href="https://github.com/gkm563/snake-game"
-                                class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-content">
-                        <div class="project-icon"><i class="fas fa-lightbulb"></i></div>
-                        <h3>Random Advice & Jokes API</h3>
-                        <p>A fun website that fetches and displays random advice or jokes from a public API. A great
-                            intro to working with APIs.</p>
-                        <div class="project-footer">
-                            <div class="tech-tags"><span class="tech-tag">HTML/CSS</span><span
-                                    class="tech-tag">JS</span></div><a href="https://github.com/gkm563/motivator-app"
-                                class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">API</span></div>
+                            <a href="https://github.com/gkm563/youtube-downloader" class="project-link" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- === NEW SERVICES SECTION === -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What I Offer</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern, and high-performance websites using React.js, Node.js, and Python (Flask/Django).</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Automation</h3>
+                    <p>Exploring and implementing AI/ML models for practical applications, automation scripts, and intelligent systems.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Security & OSINT</h3>
+                    <p>Passionate about digital defense, offering basic vulnerability assessments, security awareness, and OSINT investigations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Education Section -->
     <section id="education">
@@ -1121,21 +1284,36 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Achievements</h2>
             <div class="timeline">
+                
+                <!-- === NEW ACHIEVEMENT ITEM === -->
                 <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>B.Tech 1st Year Topper</h3>
+                        <div class="date">2025</div>
+                        <p>Achieved <strong>5th Rank</strong> in the B.Tech 1st Year examinations at United Institute of Technology (UIT).</p>
+                    </div>
+                </div>
+
+                <!-- Existing Item 1 (now 2nd) -->
+                <div class="timeline-item" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>Top Intermediate Scorer</h3>
                         <div class="date">2023</div>
                         <p>Achieved an outstanding score of 92.67% in the Intermediate examinations.</p>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-left">
+
+                <!-- Existing Item 2 (now 3rd) -->
+                <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>Class Topper</h3>
                         <div class="date">2022</div>
                         <p>Secured 1st Rank in Class 11th, demonstrating academic excellence.</p>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-right">
+
+                <!-- Existing Item 3 (now 4th) -->
+                <div class="timeline-item" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>High School Distinction</h3>
                         <div class="date">2021</div>
@@ -1146,11 +1324,20 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- === UPDATED CONTACT SECTION (FORMSPREE) === -->
     <section id="contact">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
-            <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-delay="100">
+            <p style="text-align: center; max-width: 600px; margin: -2rem auto 3rem auto; color: #94a3b8;">
+                Have a project, a question, or just want to connect? My inbox is always open.
+            </p>
+            
+            <!-- 
+                IMPORTANT: 
+                1. Go to https://formspree.io/ and create a new form.
+                2. Replace "YOUR-UNIQUE-ID" below with your Formspree form ID.
+            -->
+            <form id="fs-frm" action="https://formspree.io/f/YOUR-UNIQUE-ID" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="100">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
@@ -1160,6 +1347,8 @@
                 <div class="form-group">
                     <textarea name="message" placeholder="Your Message" required></textarea>
                 </div>
+                 <!-- Optional: Add a subject line for your emails -->
+                <input type="hidden" name="_subject" value="New Message from Portfolio Website!">
                 <div style="text-align: center;">
                     <button type="submit" class="cta-button" id="submit-btn">Send Message <i
                             class="fas fa-paper-plane"></i></button>
@@ -1180,12 +1369,15 @@
                 <a href="https://www.facebook.com/gkm563" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.youtube.com/@gkm563" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
-            <p>&copy; 2025<a href="https://www.linkedin.com/in/gkm563/"> Gautam Kumar Maurya</a>. Forging the Future with Code.</p>
+            <p>&copy; 2025 <a href="https://www.linkedin.com/in/gkm563/"> Gautam Kumar Maurya</a>. Forging the Future with Code.</p>
         </div>
     </footer>
 
+    <!-- === JAVASCRIPT LIBRARIES === -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- === CUSTOM JAVASCRIPT === -->
     <script>
         // Initialize AOS (Animate on Scroll)
         AOS.init({
@@ -1194,9 +1386,16 @@
             offset: 120,
         });
 
-        // --- Animated Typing for Subtitle ---
+        // --- Animated Typing for Subtitle (UPDATED) ---
         const typed = new Typed('#typed-subtitle', {
-            strings: ['Ethical Hacking Intern @CodeResite', 'Campus Ambassador @MyGov India', 'Mood Indigo Squad Member, IIT Bombay', 'Exploring AI & Cybersecurity', 'Skilled in C, C++, HTML, CSS', 'Focused on Learning, Building & Growing'],
+            strings: [
+                'B.Tech CSE ’28 | Data Science & Full-Stack Learner',
+                'Frontend: React · Tailwind · JS',
+                'Backend: Python · Flask · Django',
+                'Ethical Hacking & OSINT',
+                'Campus Ambassador @MyGov India',
+                'Exploring AI & Cybersecurity'
+                ],
             typeSpeed: 50,
             backSpeed: 25,
             backDelay: 1500,
@@ -1220,8 +1419,8 @@
             });
         });
 
-        // --- Interactive Card Glow Effect ---
-        document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+        // --- Interactive Card Glow Effect (Applied to all cards) ---
+        document.querySelectorAll('.skill-card, .project-card, .service-card').forEach(card => {
             card.onmousemove = e => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -1259,59 +1458,54 @@
             document.body.style.cursor = 'auto';
         }
 
-        // --- Telegram Bot Integration ---
-        const contactForm = document.getElementById('contact-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const formStatus = document.getElementById('form-status');
+        // --- NEW Formspree Contact Form Logic ---
+        // This script replaces the old Telegram bot script
+        
+        var form = document.getElementById("fs-frm");
+        var formStatus = document.getElementById("form-status");
+        var submitBtn = document.getElementById("submit-btn");
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const botToken = '7559733664:AAF9NskSXQND9dwSm70U3PVEvZ9GeHH9OvM';
-            const chatId = '5097950745';
-
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-
-            const text = `📬 New Message from Portfolio Website!\n\n👤 Name: ${name}\n\n📧 Email: ${email}\n\n💬 Message:\n${message}`;
-
-            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
             // Show loading state
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
             formStatus.innerHTML = '';
-
+            
+            var data = new FormData(event.target);
+            
             try {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: text,
-                        parse_mode: 'HTML' // Optional, for formatting
-                    }),
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
 
-                const result = await response.json();
-
-                if (result.ok) {
+                if (response.ok) {
                     formStatus.innerHTML = '<p class="success">Message sent successfully! Thank you.</p>';
-                    contactForm.reset();
+                    form.reset();
                 } else {
-                    throw new Error(result.description);
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formStatus.innerHTML = `<p class="error">${data["errors"].map(error => error["message"]).join(", ")}</p>`;
+                        } else {
+                            formStatus.innerHTML = '<p class="error">Something went wrong. Please try again.</p>';
+                        }
+                    });
                 }
             } catch (error) {
-                console.error("Telegram API Error:", error);
-                formStatus.innerHTML = '<p class="error">Something went wrong. Please try again later.</p>';
+                formStatus.innerHTML = '<p class="error">Something went wrong. Please try again.</p>';
             } finally {
                 // Restore button state
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
             }
-        });
+        }
+        
+        form.addEventListener("submit", handleSubmit);
 
     </script>
 </body>
